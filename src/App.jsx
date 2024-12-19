@@ -1,12 +1,16 @@
 import "./App.css";
-import reactLogo from "./assets/react.svg";
+import IdleTimeIndicator from "./components/IdleTimeIndicator";
+import ReactIcon from "./components/ReactIcon";
+import Sidebar from "./components/Sidebar";
+import { FeatureFlagProvider } from "./contexts/FeatureFlagContext";
 
 function App() {
-
   return (
-    <>
-      <img src={reactLogo} className="logo react" alt="React logo" />
-    </>
+    <FeatureFlagProvider>
+      <Sidebar />
+      <ReactIcon />
+      <IdleTimeIndicator />
+    </FeatureFlagProvider>
   );
 }
 
