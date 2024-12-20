@@ -6,7 +6,6 @@
 }
 
 .logo {
-  height: 6em;
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
@@ -39,4 +38,25 @@
 
 .read-the-docs {
   color: #888;
+}
+
+
+
+
+@keyframes rotate-clockwise {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes rotate-counterclockwise {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
+}
+
+.rotate-clockwise {
+  animation: rotate-clockwise 5s linear infinite;
+}
+
+.rotate-counterclockwise {
+  animation: rotate-counterclockwise 5s linear infinite;
 }
